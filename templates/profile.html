@@ -1,0 +1,10 @@
+{% if request.user.is_authenticated %}
+<h1>this is profile section</h1>
+<h3>welcome <b><i>{{ user.username }}</i></b></h3><br>{{ user.father_name }}<br>{{ user.mother_name }}
+<form action="" method="post">{% csrf_token %}
+{{ form.as_p }}
+<p><button class="btnsubmit" type="submit">Submit Details</button>
+</form>
+{% else %}
+please login first
+{% endif %}

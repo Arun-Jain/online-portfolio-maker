@@ -1,0 +1,12 @@
+<form method="POST" action="">{% csrf_token %}
+		<div class="input_class">
+			{{ login_of_user.username }}<br>
+			{{ login_of_user.password }}
+			<div class="container" style="width:240px;">
+      <div class="buttontwo">
+			<button type="submit">LOGIN</button>
+			<button type="reset">RESET</button>
+      </div>
+      </div>
+		</div>
+</form>

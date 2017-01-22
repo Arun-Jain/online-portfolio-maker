@@ -1,0 +1,14 @@
+<form method="POST" action="">{% csrf_token %}
+		<div class="input_class">
+			<font color="orange"></font>
+			{{ signup_of_user.username }}<br>
+			{{ signup_of_user.email }}<br>
+			{{ signup_of_user.password }}<br>
+			<div class="container" style="width:240px;">
+			<div class="buttontwo">
+			<button type="submit">SIGN UP</button>
+			<button type="reset">RESET</button>
+			</div>
+			</div>
+		</div>
+</form>

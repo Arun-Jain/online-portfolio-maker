@@ -125,6 +125,3 @@ STATIC_URL = '/static/'
 LOGIN_REQUIRED = '/login/'
 
 LOGIN_REDIRECT_URL = '/profile/'
-
-
-

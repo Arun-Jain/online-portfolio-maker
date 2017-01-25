@@ -9,9 +9,6 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
-def index(request):
-	return render(request, "index.html", {})
-
 def login_view(request):
 	login_of_user = forms.loginform(request.POST or None)
 	if request.method=="POST":

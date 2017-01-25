@@ -1,3 +1,10 @@
+{% load staticfiles %}
+<html>
+<head>
+</head>
+<title>
+</title>
+<body>
 <form method="POST" action="">{% csrf_token %}
 		<div class="input_class">
 			{{ login_of_user.username }}<br>
@@ -10,3 +17,5 @@
       </div>
 		</div>
 </form>
+</body>
+</html>

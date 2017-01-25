@@ -60,3 +60,6 @@ def myprofile_view(request):
 #		'profiles':profiles,
 	}
 	return render(request, 'profile.html', context)
+
+def errortest(request):
+	return render(request, 'error404.html', {})

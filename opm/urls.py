@@ -21,3 +21,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('opm_app.urls')),
 ]
+
+handler404 = 'opm_app.views.errortest'

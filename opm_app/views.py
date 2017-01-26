@@ -61,5 +61,5 @@ def myprofile_view(request):
 	}
 	return render(request, 'profile.html', context)
 
-def errortest(request):
-	return render(request, 'error404.html', {})
+#def errortest(request):
+#	return render(request, 'error404.html', {})

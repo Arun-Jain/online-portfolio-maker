@@ -4,7 +4,6 @@ from django.http import HttpResponse,Http404
 from django.contrib.auth import authenticate, login as auth_login, logout
 from django.contrib.auth.decorators import login_required
 from . import forms
-from .models import UserProfile
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
@@ -48,18 +47,14 @@ def signup_view(request):
 
 @login_required
 def myprofile_view(request):
-#	profiles = UserProfile.objects.create(user=request.user)
-	form = UserProfileForm(request.POST or None, request.FILES or None)
+	form = UserProfileForm(request.POST or None, request.FILES or None, instance = request.user.profile)
 	if form.is_valid():
-		instance = form.save(commit=False)
-		instance.save()
+		profile = form.save(commit=False)
+		profile.user = request.user
+		profile.save()
 		return HttpResponse("Successfully created your Portfolio")
-#	pro = request.user.profile
+
 	context = {
 		'form': form,
-#		'profiles':profiles,
 	}
 	return render(request, 'profile.html', context)
-
-#def errortest(request):
-#	return render(request, 'error404.html', {})

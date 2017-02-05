@@ -4,6 +4,7 @@
 <form action="" method="post">{% csrf_token %}
 {{ form.as_p }}
 <p><button class="btnsubmit" type="submit">Submit Details</button>
+<a href="/logout">Logout</a>
 </form>
 {% else %}
 please login first

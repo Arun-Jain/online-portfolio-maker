@@ -58,3 +58,7 @@ def myprofile_view(request):
 		'form': form,
 	}
 	return render(request, 'profile.html', context)
+
+def logout_view(request):
+	logout(request)
+	return HttpResponse("<h1>You Are Logged Out Successfully</h1>")

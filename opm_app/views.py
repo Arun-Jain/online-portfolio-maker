@@ -62,3 +62,9 @@ def myprofile_view(request):
 def logout_view(request):
 	logout(request)
 	return HttpResponse("<h1>You Are Logged Out Successfully</h1>")
+
+def themeoneview(request):
+	context = {
+	
+	}
+	return render(request, 'port1.html', context)

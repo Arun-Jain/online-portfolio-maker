@@ -1,0 +1,46 @@
+{% load staticfiles %}
+{% if request.user.is_authenticated %}
+<html>
+<head>
+<title>Theme-Thunder</title>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+          
+<link href="{% static "css/port1.css" %}" rel="stylesheet">
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo"><i class="material-icons">perm_identity</i>{{ request.user }}</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><span style="font-size:20px;cursor:pointer" onclick="openNav()">My Projects</span></li>
+        <li><a href="#">My Biodata</a></li>
+        <li><a href="#">Skills</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+<div id="mySidenav" class="sidenav">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<a href="#">My Projects</a>
+</div>
+</body>
+</html>
+{% endif %}

@@ -1,21 +1,37 @@
 {% load staticfiles %}
+
 <html>
 <head>
+<link href="{% static "css/login.css" %}" rel="stylesheet">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+
 </head>
-<title>
-</title>
 <body>
+<div class="bg-img">
+</div>
+<div class="valign-wrapper">
+	<div class="center-align">Online Portfolio Maker
+	</div>
+</div>
+<div class="card-panel hoverable white">
 <form method="POST" action="">{% csrf_token %}
 		<div class="input_class">
+		<h1 class="login_heading">Login Page</h1>
 			{{ login_of_user.username }}<br>
 			{{ login_of_user.password }}
 			<div class="container" style="width:240px;">
-      <div class="buttontwo">
-			<button type="submit">LOGIN</button>
-			<button type="reset">RESET</button>
-      </div>
-      </div>
+		<div class="buttontwo">
+			<button class="waves-effect waves-light btn" type="submit">LOGIN</button>
+			<button class="waves-effect waves-light btn" type="reset">RESET</button>
+		</div>
+		</div>
 		</div>
 </form>
+</div>
 </body>
 </html>

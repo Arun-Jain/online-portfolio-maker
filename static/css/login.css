@@ -1,0 +1,32 @@
+body {
+	background-color: #202636;
+}
+
+.card-panel {
+	padding:20px;
+	height:400px;
+	position: absolute;
+	top:100px;
+	left:70px;
+	z-index: 10;
+	border-radius:4px;
+}
+
+.center-align {
+	color:orange;
+	font-family: geometos;
+	font-size: 30px;
+}
+
+.bg-img {
+	width: 100%;
+	height: 100%;
+	background: url(../images/bgimg.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 0;
+	opacity: 0.2;
+	left: 0;
+	top:0;
+}

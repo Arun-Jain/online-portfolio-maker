@@ -1,9 +1,44 @@
-<h1>this is profile section</h1>
-<h3>welcome <b><i>{{ user.username }}</i></b></h3><br>{{user.id}}<br>{{ user.father_name }}<br>{{ user.mother_name }}
-<form action="" method="post">{% csrf_token %}
+{% if request.user.is_authenticated %}
+{% load staticfiles %}
+
+
+<html>
+<head>
+<link href="{% static "css/profile.css" %}" rel="stylesheet">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
+
+</head>
+<body>
+<div class="bg-img">
+</div>
+ <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><i class="tiny material-icons">perm_identity</i></li><li><a href="#">{{ user.username }}</a></li>
+        <li><a href="#">Edit</a></li>
+        <li><a href="#">xyz</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+<h3>Fill the entries to make your Portfolio.</h3>
+<div class="form-container">
+  <form action="" method="post">{% csrf_token %}
 {{ form.as_p }}
-<p><button class="btnsubmit" type="submit">Submit Details</button>
-<a href="/logout">Logout</a>
+<p><button class="btnsubmit" type="submit">Generate</button></p>
+</div>
+
 </form>
+</body>
+</html>
 {% else %}
 please login first
+{% endif %}

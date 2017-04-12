@@ -10,7 +10,7 @@
 	background: url(../images/bgform.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	position: absolute;
+	position: fixed;
 	z-index: -10000;
 	left: 0;
 	top:0;

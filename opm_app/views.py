@@ -1,10 +1,10 @@
-from django.shortcuts import render,redirect
-from .forms import UserProfileForm,loginform,signupform
+from django.shortcuts import render,redirect, get_object_or_404
+from .forms import loginform,signupform, UserProfileForm
 from django.http import HttpResponse,Http404
 from django.contrib.auth import authenticate, login as auth_login, logout
 from django.contrib.auth.decorators import login_required
 from . import forms
-from django.contrib.auth.decorators import login_required
+from .models import UserProfile
 
 # Create your views here.
 
@@ -64,7 +64,8 @@ def logout_view(request):
 	return HttpResponse("<h1>You Are Logged Out Successfully</h1>")
 
 def themeoneview(request):
+	instance = UserProfile.objects.get(user=request.user)
 	context = {
-	
+		'instance' : instance,
 	}
 	return render(request, 'port1.html', context)

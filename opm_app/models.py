@@ -7,8 +7,8 @@ from django.dispatch import receiver
 
 class UserProfile(models.Model):
 	user = models.OneToOneField(User, related_name='profile')
-	father_name = models.CharField(max_length=100)
 	mother_name = models.CharField(max_length=100)
+	brother_name = models.CharField(max_length=100)
 
 #User.profile = property(lambda u: UserProfile.object.get_or_create(user=u)[0])
 	def __unicode__(self):
@@ -22,3 +22,9 @@ def create_profile(sender, **kwargs):
 		user_profile = UserProfile.objects.create(user=kwargs['instance'])
 
 post_save.connect(create_profile, sender=User)	
+
+
+
+
+
+

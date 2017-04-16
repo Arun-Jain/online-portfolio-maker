@@ -4,7 +4,7 @@
 
 <html>
 <head>
-<link href="{% static "css/profile.css" %}" rel="stylesheet">
+
 
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
@@ -12,12 +12,13 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+
+<link href="{% static "css/profile.css" %}" rel="stylesheet">
 </head>
 <body>
-<div class="bg-img">
-</div>
+<header>
  <nav>
     <div class="nav-wrapper">
       <a href="#" class="brand-logo"></a>
@@ -29,16 +30,63 @@
       </ul>
     </div>
   </nav>
-<h3>Fill the entries to make your Portfolio.</h3>
-<div class="form-container">
+</header>
+
+
+
+<main>
+<div class="container">
+<div class="row valign-wrapper">
+
+<div class="card white card-1">
+<div class="card-content black-text">
+<span>Fill the form to create your portfolio</span>
   <form action="" method="post">{% csrf_token %}
 {{ form.as_p }}
-<p><button class="btnsubmit" type="submit">Generate</button></p>
+<div class="buttontwo">
+        <button class="waves-effect waves-light btn" type="submit">GENERATE</button>
+        </div>
+</form>
+</div>
 </div>
 
-</form>
+</div>
+</div>
+</main>
+
+
+
+
+
+        <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Online Portfolio Maker</h5>
+                <p class="grey-text text-lighten-4">You can use this application to make your online portfolio anywhere anytime and can share it to any other persons.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">Blog</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">About Us</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Our Team</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Join Our Team</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Terms and Conditions</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+</footer>
 </body>
 </html>
 {% else %}
-please login first
+<span>please login first</span>
 {% endif %}

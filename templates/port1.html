@@ -14,88 +14,11 @@
           
 <link href="{% static "css/port1.css" %}" rel="stylesheet">
 
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "100%";
-}
-
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-
-function openNavmb() {
-    document.getElementById("mySidenavmb").style.width = "100%";
-}
-
-function closeNavmb() {
-    document.getElementById("mySidenavmb").style.width = "0";
-}
-
-function openNavms() {
-    document.getElementById("mySidenavms").style.width = "100%";
-}
-
-function closeNavms() {
-    document.getElementById("mySidenavms").style.width = "0";
-}
 
 </script>
 </head>
 <body>
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo"><i class="material-icons">perm_identity</i>{{ request.user }}</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><span style="font-size:20px;cursor:pointer" onclick="openNav()">My Projects</span></li>
-        <li><span style="font-size:20px;cursor:pointer" onclick="openNavmb()">My Biodata</span></li>
-        <li><span style="font-size:20px;cursor:pointer" onclick="openNavms()">My Skills</span></li>
-      </ul>
-    </div>
-  </nav>
-
-
-<div id="mySidenav" class="sidenav">
-	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-	<a href="#">My Projects</a><br>
-  <br>
-  {{ instance.name }}
-  <br>
-  {{ instance.branch }}
-  <br>
-  {{ instance.phno }}
-  <br>
-  {{ instance.url }}
-  <br>
-  {{ instance.HighSchool }}
-  <br>
-  {{ instance.HighSchool_Marks }}
-  <br>
-  {{ instance.Intermediate_School }}
-  <br>
-  {{ instance.Intermediate_Marks }}
-  <br>
-  {{ instance.BTech_Marks }}
-  <br>
-  {{ instance.skills_Set }}
-  <div>
-  </div>
-</div>
-
-<div id="mySidenavmb" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNavmb()">&times;</a>
-  <a href="#">My Biodata</a>
-  <div>
-  </div>
-</div>
-
-<div id="mySidenavms" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNavms()">&times;</a>
-  <a href="#">My Skills</a>
-  <div>
-  </div>
-</div>
-<form>{% csrf_token %}
-</form>
+ 
 </body>
 </html>
 {% endif %}

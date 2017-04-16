@@ -15,3 +15,48 @@
 	left: 0;
 	top:0;
 }
+
+body {
+	background-color: #f5f5f5;
+}
+
+nav
+{
+	background-color: #424242;
+	font-family: geometos;
+}
+
+span {
+	font-family: geometos;
+	font-size: 40px;
+	color:grey;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+	position: relative;
+	margin-top:200px;
+	z-index: -10000000
+	color:black;
+}
+
+.page-footer
+{
+	background-color: #212121;
+	font-family: geometos;
+}
+
+.card:hover {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.card{
+	width:1000px;
+}
+
+.buttontwo {
+	text-align: center;
+}

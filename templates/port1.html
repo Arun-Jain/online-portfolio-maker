@@ -44,7 +44,7 @@ function closeNavms() {
 <body>
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo"><i class="material-icons">perm_identity</i>{{ request.user }}{{ instance.father_name }}{{ instance.mother_name }}</a>
+      <a href="#" class="brand-logo"><i class="material-icons">perm_identity</i>{{ request.user }}</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><span style="font-size:20px;cursor:pointer" onclick="openNav()">My Projects</span></li>
         <li><span style="font-size:20px;cursor:pointer" onclick="openNavmb()">My Biodata</span></li>
@@ -57,11 +57,26 @@ function closeNavms() {
 <div id="mySidenav" class="sidenav">
 	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 	<a href="#">My Projects</a><br>
-  {{ instance.father_name }}
   <br>
-  {{ instance.mother_name }}
+  {{ instance.name }}
   <br>
-  {{ instance.brother_name }}
+  {{ instance.branch }}
+  <br>
+  {{ instance.phno }}
+  <br>
+  {{ instance.url }}
+  <br>
+  {{ instance.HighSchool }}
+  <br>
+  {{ instance.HighSchool_Marks }}
+  <br>
+  {{ instance.Intermediate_School }}
+  <br>
+  {{ instance.Intermediate_Marks }}
+  <br>
+  {{ instance.BTech_Marks }}
+  <br>
+  {{ instance.skills_Set }}
   <div>
   </div>
 </div>

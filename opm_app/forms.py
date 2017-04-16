@@ -34,4 +34,19 @@ class signupform(forms.ModelForm):
 class UserProfileForm(forms.ModelForm):
 	class Meta:
 		model = UserProfile
-		fields = ('mother_name', 'brother_name', )
+		fields = ('name',
+			'branch',
+			'phno',
+			'url',
+			'HighSchool',
+			'HighSchool_Marks',
+			'Intermediate_School',
+			'Intermediate_Marks',
+			'BTech_Marks',
+			'skills_Set',
+			'Project_Title',
+			'Project_Desc',
+			'Experience_Desc',
+			'Achieve_Desc',
+			'interest_Desc', 
+			)

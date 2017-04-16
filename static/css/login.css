@@ -1,52 +1,60 @@
 body {
-	background-color: #202636;
+	background-color: #b2ebf2;
 }
 
-.card-panel {
-	padding:20px;
-	height:400px;
-	position: absolute;
-	top:100px;
-	left:70px;
-	z-index: 10;
-	border-radius:4px;
-}
-
-.center-align {
-	color:orange;
+span {
+	text-align: center;
+	color:#000;
 	font-family: geometos;
-	font-size: 30px;
-	padding-left: 470px;
 }
 
-.bg-img {
-	width: 100%;
-	height: 100%;
-	background: url(../images/bgimg.png);
-	background-size: cover;
-	background-repeat: no-repeat;
+.card {
+	height:450px;
 	position: absolute;
-	z-index: 0;
-	opacity: 0.2;
-	left: 0;
-	top:0;
+	top:80px;
+	box-shadow: 
 }
 
-.dummy-text {
-	color:white;
+.card:hover {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.buttontwo {
+	text-align: center;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+    color: #ffab40;
+    margin-right: 0px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+	position: relative;
+	margin-top:650px;
+	z-index: -10000000
+	color:black;
+}
+
+.page-footer
+{
+	background-color: #212121;
 	font-family: geometos;
-	width:600px;
-	height:400px;
-	position: absolute;
-	left:580px;
-	z-index: 100000;
-	top:100px;
-	text-align: justify;
-    text-justify: inter-word;
 }
 
-.buttontwo a {
-	position:relative;
-	top:30px;
-	left:45px;
+nav
+{
+	background-color: #424242;
+	font-family: geometos;
 }
+

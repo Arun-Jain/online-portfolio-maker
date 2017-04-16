@@ -2,7 +2,7 @@
 
 <html>
 <head>
-<link href="{% static "css/login.css" %}" rel="stylesheet">
+
 
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
@@ -10,32 +10,78 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
 
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="{% static "css/login.css" %}" rel="stylesheet">
 </head>
 <body>
-<div class="bg-img">
-</div>
-<div class="valign-wrapper">
-	<div class="center-align">Online Portfolio Maker
-	</div>
-	<div class="dummy-text">Online portfolio maker is a platform to make a portfolio anywhere anytime.This is blah blah blah .....
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, 
-</div>
-</div>
-<div class="card-panel hoverable white">
-<form method="POST" action="">{% csrf_token %}
-		<div class="input_class">
-		<h1 class="login_heading">Login Page</h1>
-			{{ login_of_user.username }}<br>
+<header>
+
+  <nav class="page-header">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Online Portfolio Maker</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+       <li><a href="/login">Login</a></li>
+       <li><a href="/register">Register</a></li>
+       </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main>
+<div class="container">
+  <div class="row valign-wrapper">
+    <div class="col s4 offset-s4 valign">
+      <div class="card white card-1">
+        <div class="card-content black-text">
+          <span class="card-title">Login</span>
+          <form method="POST" action="">{% csrf_token %}
+	<div class="input_class">
+			<i class="material-icons">perm_identity</i>{{ login_of_user.username }}<br>
+			<i class="material-icons">lock_outline</i>
 			{{ login_of_user.password }}
-			<div class="container" style="width:240px;">
-		<div class="buttontwo">
-			<button class="waves-effect waves-light btn" type="submit">LOGIN</button>
-			<button class="waves-effect waves-light btn" type="reset">RESET</button>
-			<a class="waves-effect waves-light btn" href="/signup">Sign Up</a>
-		</div>
-		</div>
-		</div>
+			<div class="buttontwo">
+				<button class="waves-effect waves-light btn" type="submit">LOGIN</button>
+				<button class="waves-effect waves-light btn" type="reset">RESET</button>
+			</div>
+	</div>
 </form>
+        </div>
+        <div class="card-action">
+        New to OPM <a href="/register">Register</a> now.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+        <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Online Portfolio Maker</h5>
+                <p class="grey-text text-lighten-4">You can use this application to make your online portfolio anywhere anytime and can share it to any other persons.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">Blog</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">About Us</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Our Team</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Join Our Team</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Terms and Conditions</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+
 </div>
 </body>
 </html>

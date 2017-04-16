@@ -7,8 +7,22 @@ from django.dispatch import receiver
 
 class UserProfile(models.Model):
 	user = models.OneToOneField(User, related_name='profile')
-	mother_name = models.CharField(max_length=100)
 	brother_name = models.CharField(max_length=100)
+	name = models.CharField(max_length=100, null=True ,blank=True,default=None)
+	branch = models.CharField(max_length = 500)
+	phno  = models.CharField(max_length = 10)
+	url = models.CharField(max_length=1000)
+	HighSchool = models.CharField(max_length =500)
+	HighSchool_Marks = models.CharField(max_length = 7)
+	Intermediate_School = models.CharField(max_length=500)
+	Intermediate_Marks = models.CharField(max_length=7)
+	BTech_Marks = models.CharField(max_length = 100)
+	skills_Set = models.CharField(max_length = 10000)
+	Project_Title = models.CharField(max_length = 1000)
+	Project_Desc = models.CharField(max_length  = 10000)
+	Experience_Desc = models.CharField(max_length = 10000)
+	Achieve_Desc = models.CharField(max_length = 10000)
+	interest_Desc = models.CharField(max_length = 10000)
 
 #User.profile = property(lambda u: UserProfile.object.get_or_create(user=u)[0])
 	def __unicode__(self):

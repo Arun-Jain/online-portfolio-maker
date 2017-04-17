@@ -1,45 +1,48 @@
-nav .nav-wrapper a {
-	font-size: 20px;	
+.card:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-/* This is Side Nav Section */
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    text-align:center;
+body {
+    background-color: #b2ebf2;
 }
 
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s
-
+.card-1 {
+    height: 400px;
 }
 
-.sidenav a:hover{
-    color: #f1f1f1;
+.card-2 {
+    height: 300px;
 }
 
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+.card-3 {
+    height: 400px;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+.card-4 {
+    height: 400px;
+}
+
+.card-5 {
+    height: 400px;
+}
+
+.card-6 {
+    height: 400px;
+}
+.image-circle {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position:relative;
+    z-index: 10000000000000;
+    background-color: orange;
+    top:-70px;
+    left:70px;
+}
+
+span {
+    text-align: center;
+    font-family: geometos;
+    font-size: 24px;
+    font-weight: bold;
 }

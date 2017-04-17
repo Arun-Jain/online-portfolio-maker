@@ -2,7 +2,7 @@
 {% if request.user.is_authenticated %}
 <html>
 <head>
-<title>Theme-Thunder</title>
+<title>Theme-LITE</title>
 
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
@@ -14,10 +14,75 @@
           
 <link href="{% static "css/port1.css" %}" rel="stylesheet">
 
-
-</script>
 </head>
 <body>
+
+<div class="container">
+  <div class="row valign-wrapper">
+    <div class="col s4 valign">
+      <div class="card white card-1">
+        <div class="card-content black-text">
+          <span>Education</span>
+          <div class="card-action">
+          </div>
+          <div class="sub-heading-1">
+          <u>HIGHSCHOOL</u>:&nbsp;{{ instance.HighSchool }}<br>
+          <u>HIGHSCHOOL MARKS</u>:&nbsp;{{ instance.HighSchool_Marks }}<br>
+          <u>INTERMEDIATE</u>:&nbsp;{{ instance.Intermediate_School }}<br>
+          <u>INTERMEDIATE MARKS</u>:&nbsp;{{ instance.Intermediate_Marks }}<br>
+          <u>B.Tech MARKS</u>:&nbsp;{{ instance.BTech_Marks }}<br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col s4 valign">
+      <div class="card white card-2">
+        <div class="card-content black-text">
+          <div class="image-circle">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col s4 valign">
+      <div class="card white card-3">
+        <div class="card-content black-text">
+          <span>Project Details</span>
+          <div class="card-action">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row valign-wrapper">
+    <div class="col s4 valign">
+      <div class="card white card-4">
+        <div class="card-content black-text">
+          <span>Achievements</span>
+          <div class="card-action">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col s4 valign">
+      <div class="card white card-5">
+        <div class="card-content black-text">
+          <span>Interests</span>
+          <div class="card-action">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col s4 valign">
+      <div class="card white card-6">
+        <div class="card-content black-text">
+          <span>Skills</span>
+          <div class="card-action">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
  
 </body>
 </html>

@@ -52,7 +52,7 @@ def myprofile_view(request):
 		profile = form.save(commit=False)
 		profile.user = request.user
 		profile.save()
-		return HttpResponse("Successfully created your Portfolio")
+		return HttpResponse("Successfully created your Portfolio <br> click this link to see your portfolio : <a href='/theme1'>myportfolio</a>")
 
 	context = {
 		'form': form,

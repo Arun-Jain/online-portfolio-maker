@@ -41,7 +41,7 @@
 <div class="card white card-1">
 <div class="card-content black-text">
 <span>Fill the form to create your portfolio</span>
-  <form action="" method="post">{% csrf_token %}
+  <form action="" enctype="multipart/form-data" method="post">{% csrf_token %}
 {{ form.as_p }}
 <div class="buttontwo">
         <button class="waves-effect waves-light btn" type="submit">GENERATE</button>

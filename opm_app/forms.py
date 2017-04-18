@@ -49,4 +49,6 @@ class UserProfileForm(forms.ModelForm):
 			'Experience_Desc',
 			'Achieve_Desc',
 			'interest_Desc', 
+			'Self_Description',
+			'image',
 			)

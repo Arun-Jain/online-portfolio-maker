@@ -3,6 +3,7 @@ from django.db.models.signals import post_save
 from django.db import models
 from django.contrib.auth.models import User
 from django.dispatch import receiver
+import os
 # Create your models here.
 
 class UserProfile(models.Model):
@@ -23,13 +24,17 @@ class UserProfile(models.Model):
 	Experience_Desc = models.CharField(max_length = 10000)
 	Achieve_Desc = models.CharField(max_length = 10000)
 	interest_Desc = models.CharField(max_length = 10000)
-
+	Self_Description = models.CharField(max_length = 10000)
+	image = models.FileField(blank= True, null=True)
 #User.profile = property(lambda u: UserProfile.object.get_or_create(user=u)[0])
 	def __unicode__(self):
 		return '%s' % (self.user)
 
 	class Meta:
 		db_table = 'at_user_profile'
+
+	def filename(self):
+		return os.path.basename(self.image.name)
 
 def create_profile(sender, **kwargs):
 	if kwargs['created']:

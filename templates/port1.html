@@ -39,6 +39,16 @@
       <div class="card white card-2">
         <div class="card-content black-text">
           <div class="image-circle">
+          	<img src="{{ MEDIA_URL }}{{ instance.image }}" height="100px" width="100px" style="border-radius: 50%"/>
+          </div>
+          <div class="sub-heading-2">
+          {{ instance.name }}
+          </div>
+           <div class="card-action">
+          </div>
+          <div class="description">
+          <u>Branch</u> : &nbsp;{{ instance.branch }}<br>
+          {{ instance.Self_Description }}
           </div>
         </div>
       </div>
@@ -48,6 +58,10 @@
         <div class="card-content black-text">
           <span>Project Details</span>
           <div class="card-action">
+          </div>
+          <div class="project-details">
+          	<u>Project Title</u> : &nbsp;{{ instance.Project_Title }}<br>
+          	<u>Project Details</u> : &nbsp;{{ instance.Project_Desc }}
           </div>
         </div>
       </div>
@@ -60,6 +74,9 @@
           <span>Achievements</span>
           <div class="card-action">
           </div>
+          <div class="achievements-details">
+          	 {{ instance.Achieve_Desc }}
+          </div>
         </div>
       </div>
     </div>
@@ -69,6 +86,9 @@
           <span>Interests</span>
           <div class="card-action">
           </div>
+          <div class="interest-details">
+          	{{ instance.interest_Desc }}
+          </div>
         </div>
       </div>
     </div>
@@ -77,6 +97,9 @@
         <div class="card-content black-text">
           <span>Skills</span>
           <div class="card-action">
+          </div>
+          <div class="skills-details">
+          {{ instance.skills_Set }}
           </div>
         </div>
       </div>

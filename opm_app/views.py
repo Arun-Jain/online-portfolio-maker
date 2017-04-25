@@ -52,7 +52,7 @@ def myprofile_view(request):
 		profile = form.save(commit=False)
 		profile.user = request.user
 		profile.save()
-		return HttpResponse("Successfully created your Portfolio <br> click this link to see your portfolio : <a href='/theme1'>myportfolio</a>")
+		return redirect('/link')
 
 	context = {
 		'form': form,
@@ -69,3 +69,7 @@ def themeoneview(request):
 		'instance' : instance,
 	}
 	return render(request, 'port1.html', context)
+
+def link_generate(request):
+	context = {}
+	return render(request, 'link.html', context)

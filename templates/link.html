@@ -1,0 +1,23 @@
+<html>
+<head>
+<script>
+function myFunction() {
+	if(document.getElementById('1').checked) {
+		document.getElementById('selective').href = "/theme1"
+	}
+	if(document.getElementById('2').checked) {
+		document.getElementById('selective').href = "/theme2"
+	}
+}
+</script>
+</head>
+<title>Link</title>
+<body>
+<h3>Choose your theme:</h3><br>
+<form>
+<input type="radio" name="theme" value="lite" id="1">Theme-Lite<br>
+<input type="radio" name="theme" value="heaven" id="2">Theme-Heaven<br>
+</form>
+Successfully created your Portfolio <br> click this link to see your portfolio : <a href='' id="selective" onclick="myFunction()">myportfolio</a>
+</body>
+</html>

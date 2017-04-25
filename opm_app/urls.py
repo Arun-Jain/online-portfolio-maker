@@ -7,4 +7,5 @@ urlpatterns = [
 	url(r'^profile/$', views.myprofile_view, name='myprofile_view'),
 	url(r'^logout/$', views.logout_view , name='logout_view'),
 	url(r'^theme1/$', views.themeoneview , name='theme_one_view'),
+	url(r'^link/$', views.link_generate , name='link_generate_view'),
 ]

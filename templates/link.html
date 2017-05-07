@@ -1,5 +1,21 @@
+{% if request.user.is_authenticated %}
+{% load staticfiles %}
 <html>
 <head>
+
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<link href="{% static "css/link.css" %}" rel="stylesheet">
+
+
 <script>
 function myFunction() {
 	if(document.getElementById('1').checked) {
@@ -13,11 +29,31 @@ function myFunction() {
 </head>
 <title>Link</title>
 <body>
-<h3>Choose your theme:</h3><br>
-<form>
-<input type="radio" name="theme" value="lite" id="1">Theme-Lite<br>
-<input type="radio" name="theme" value="heaven" id="2">Theme-Heaven<br>
-</form>
+<div class="container">
+  <div class="row valign-wrapper">
+<div class="col s12 valign">
+      <div class="card white card-x">
+        <div class="card-content black-text">
+        <span>Choose your Theme:</span>
+        <div class="card-action">
+          </div>
+          <div class="project-details">
+<p>
+    <input class="with-gap" name="theme" type="radio" id="1"  />
+    <label for="1">Theme-Lite</label>
+</p>
+<p>
+    <input class="with-gap" name="theme" type="radio" id="2"  />
+    <label for="2">Theme-Heaven</label>
+</p>
 Successfully created your Portfolio <br> click this link to see your portfolio : <a href='' id="selective" onclick="myFunction()">myportfolio</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
 </body>
 </html>
+{% endif %}

@@ -10,16 +10,20 @@ from .models import UserProfile
 
 def login_view(request):
 	login_of_user = forms.loginform(request.POST or None)
-	if request.method=="POST":
-		username = request.POST['username']
-		password = request.POST['password']
-		users = authenticate(username=username, password=password)
-		if users is not None:
-			if users.is_active:
-				auth_login(request, users)
-				return redirect('/profile/')
-		else:
-			return HttpResponse("username and password didn't match ")
+	user = request.user
+	if user.is_authenticated():
+		return redirect('/profile/')
+	else:
+		if request.method=="POST":
+			username = request.POST['username']
+			password = request.POST['password']
+			users = authenticate(username=username, password=password)
+			if users is not None:
+				if users.is_active:
+					auth_login(request, users)
+					return redirect('/profile/')
+			else:
+				return HttpResponse("username and password didn't match ")
 
 	context = {
 		'login_of_user': login_of_user,
@@ -69,6 +73,14 @@ def themeoneview(request):
 		'instance' : instance,
 	}
 	return render(request, 'port1.html', context)
+
+def themetwoview(request):
+	instance = UserProfile.objects.get(user=request.user)
+	context = {
+		'instance' : instance,
+	}
+	return render(request, 'port2.html', context)
+
 
 def link_generate(request):
 	context = {}
